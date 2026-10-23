@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+backend/uploads/
+*.log
+.DS_Store
+Thumbs.db
+CREDENTIALS.md

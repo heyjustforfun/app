@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: apexledger-portal
+    env: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        value: mysql://root:DAILGcMsVsxmMGsopBUMFUQtDwldOjHB@switchyard.proxy.rlwy.net:52365/railway

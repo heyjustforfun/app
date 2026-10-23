@@ -1,0 +1,32 @@
+{
+  "name": "fund-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Investment fund portal: public website, investor/admin dashboard and Express + MySQL API",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "build": "npm install --include=dev --include=optional && npm --prefix backend install && npm --prefix website install --include=dev --include=optional && npm --prefix website run build && npm --prefix dashboard install --include=dev --include=optional && npm --prefix dashboard run build",
+    "start": "node backend/src/server.js",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix website install && npm --prefix dashboard install",
+    "dev:api": "npm --prefix backend run dev",
+    "dev:website": "npm --prefix website run dev",
+    "dev:dashboard": "npm --prefix dashboard run dev",
+    "seed:demo": "npm --prefix backend run seed:demo"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.8.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.5"
+  }
+}
