@@ -6,7 +6,8 @@
   "description": "Investment fund portal: public website, investor/admin dashboard and Express + MySQL API",
   "main": "backend/src/server.js",
   "scripts": {
-    "build": "npm install --include=dev --include=optional && npm --prefix backend install && npm --prefix website install --include=dev --include=optional && npm --prefix website run build && npm --prefix dashboard install --include=dev --include=optional && npm --prefix dashboard run build",
+    "build": "npm install && npm --prefix backend install",
+    "build:all": "npm install --include=dev --include=optional && npm --prefix backend install && npm --prefix website install --include=dev --include=optional && npm --prefix website run build && npm --prefix dashboard install --include=dev --include=optional && npm --prefix dashboard run build",
     "start": "node backend/src/server.js",
     "install:all": "npm install && npm --prefix backend install && npm --prefix website install && npm --prefix dashboard install",
     "dev:api": "npm --prefix backend run dev",
